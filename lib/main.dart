@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_exam/route.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -16,12 +17,5 @@ class MyApp extends StatelessWidget {
       routerDelegate: myRoute.routerDelegate,
       routeInformationProvider: myRoute.routeInformationProvider,
     );
-    // return MaterialApp(
-    //   title: 'Flutter Demo',
-    //   theme: ThemeData(
-    //     primarySwatch: Colors.blue,
-    //   ),
-    //   home: const Home(),
-    // );
   }
 }
